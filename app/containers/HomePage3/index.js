@@ -33,9 +33,9 @@ import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-const key = 'home';
+const key = 'home3';
 
-export function HomePage({
+export function HomePage3({
   username,
   loading,
   error,
@@ -67,7 +67,7 @@ export function HomePage({
         />
       </Helmet>
       <div>
-        <CenteredSection>HOME 1</CenteredSection>
+        <CenteredSection>HOME 3</CenteredSection>
         <Section>
           <H2>
             <FormattedMessage {...messages.trymeHeader} />
@@ -94,7 +94,7 @@ export function HomePage({
   );
 }
 
-HomePage.propTypes = {
+HomePage3.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
@@ -128,4 +128,4 @@ const withConnect = connect(
 export default compose(
   withConnect,
   memo,
-)(HomePage);
+)(HomePage3);
